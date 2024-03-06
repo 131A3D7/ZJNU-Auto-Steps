@@ -28,4 +28,4 @@ jobs:
         PHONE: ${{ secrets.PHONE_EMAIL }}
         PASSWORD: ${{ secrets.PASSWORD }}
         NUMBER: ${{ secrets.NUMBER }}
-      run: python script.py
+      run: python main.py
