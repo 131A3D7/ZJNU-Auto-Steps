@@ -1,4 +1,4 @@
-name: ZJNU Auto Block-in
+name: ZJNU Auto Steps
 
 on:
   schedule:
