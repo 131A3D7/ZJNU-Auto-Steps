@@ -17,9 +17,9 @@ headers = {
 }
 
 data = {
-    'phone': os.environ['PHONE'],
-    'pwd': os.environ['PASSWORD'],
-    'num': os.environ['NUMBER']
+    'phone': 'users.phone',
+    'pwd': 'users.pwd',
+    'num': 'users.num'
 }
 proxies = {
     # 如果不需要代理，请将这里设置为 None
