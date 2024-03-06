@@ -16,12 +16,11 @@ headers = {
     'Accept-Language': 'zh-CN,zh-HK;q=0.9,zh;q=0.8,en;q=0.7'
 }
 
-data={
-    'phone': '547572207@qq.com',
-    'pwd': 'fzx2002112588',
-    'num': '15000'
+data = {
+    'phone': os.environ['PHONE'],
+    'pwd': os.environ['PASSWORD'],
+    'num': os.environ['NUMBER']
 }
-
 proxies = {
     # 如果不需要代理，请将这里设置为 None
     'http': None,
