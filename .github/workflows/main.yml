@@ -1,0 +1,31 @@
+name: Daily Script Execution
+
+on:
+  schedule:
+    # 每天的05:00 UTC执行
+    - cron: '1 5 * * *'
+
+jobs:
+  execute_script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Run script
+      env:
+        PHONE: ${{ secrets.PHONE_EMAIL }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        NUMBER: ${{ secrets.NUMBER }}
+      run: python script.py
